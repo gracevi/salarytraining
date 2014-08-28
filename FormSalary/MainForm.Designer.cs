@@ -46,6 +46,8 @@
             this.LongPay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Deductions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.LoadButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PnpPersonnelGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +103,7 @@
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(139, 26);
             this.FirstNameTextBox.TabIndex = 5;
+            this.FirstNameTextBox.Click += new System.EventHandler(this.FirstNameTextBox_Click);
             // 
             // LastNameTextBox
             // 
@@ -108,6 +111,7 @@
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(139, 26);
             this.LastNameTextBox.TabIndex = 6;
+            this.LastNameTextBox.Click += new System.EventHandler(this.LastNameTextBox_Click);
             // 
             // PositionListBox
             // 
@@ -143,7 +147,7 @@
             this.PnpPersonnelGridView.Location = new System.Drawing.Point(56, 370);
             this.PnpPersonnelGridView.Name = "PnpPersonnelGridView";
             this.PnpPersonnelGridView.RowTemplate.Height = 28;
-            this.PnpPersonnelGridView.Size = new System.Drawing.Size(1185, 421);
+            this.PnpPersonnelGridView.Size = new System.Drawing.Size(1364, 421);
             this.PnpPersonnelGridView.TabIndex = 9;
             // 
             // FirstName
@@ -194,11 +198,33 @@
             this.Salary.HeaderText = "Salary";
             this.Salary.Name = "Salary";
             // 
+            // SaveButton
+            // 
+            this.SaveButton.Location = new System.Drawing.Point(193, 293);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(139, 46);
+            this.SaveButton.TabIndex = 10;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // LoadButton
+            // 
+            this.LoadButton.Location = new System.Drawing.Point(56, 293);
+            this.LoadButton.Name = "LoadButton";
+            this.LoadButton.Size = new System.Drawing.Size(131, 46);
+            this.LoadButton.TabIndex = 11;
+            this.LoadButton.Text = "Load";
+            this.LoadButton.UseVisualStyleBackColor = true;
+            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1453, 935);
+            this.Controls.Add(this.LoadButton);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.PnpPersonnelGridView);
             this.Controls.Add(this.HireDateTimePicker);
             this.Controls.Add(this.PositionListBox);
@@ -237,5 +263,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LongPay;
         private System.Windows.Forms.DataGridViewTextBoxColumn Deductions;
         private System.Windows.Forms.DataGridViewTextBoxColumn Salary;
+        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button LoadButton;
     }
 }
